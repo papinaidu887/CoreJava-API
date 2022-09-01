@@ -27,7 +27,7 @@ public class DuplicateElements {
 		System.out.println(uniqueSet);    
 
 		DuplicateElements.uniqueCharacters(str);
-		// DuplicateElements.uniqueWords(str1);
+		DuplicateElements.uniqueWords(str1);
 
 	}
 
@@ -42,26 +42,27 @@ public class DuplicateElements {
 		return set;
 	}
 
-//	private static void uniqueWords(String str1) {
-//
-//		String[] words = str1.split(" ");
-//
-//		for (String word : words) {
-//			for (int i = 0; i < word.length(); i++) {
-//				int count = 0;
-//				for (int j = i + 1; i < word.length(); j++) {
-//					if (word.charAt(i) == word.charAt(j)) {
-//						count++;
-//						break;
-//					}
-//				}
-//				if (count == 0) {
-//					System.out.print(" " + word.charAt(i));
-//				}
-//			}
-//		}
-//
-//	}
+	@SuppressWarnings("unused")
+	private static void uniqueWords(String str1) {
+
+		String[] words = str1.split(" ");
+
+		for (String word : words) {
+			for (int i = 0; i < word.length(); i++) {
+				int count = 0;
+				for (int j = i + 1; i < word.length(); j++) {
+					if (word.charAt(i) == word.charAt(j)) {
+						count++;
+						break;
+					}
+				}
+				if (count == 0) {
+					System.out.print(" " + word.charAt(i));
+				}
+			}
+		}
+
+	}
 
 	private static void uniqueCharacters(String str) {
 
